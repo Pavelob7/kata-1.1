@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url('Barlow.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$main-font-size: clamp(1em, calc(12px + 1vw), 20px);
+$h1-font-size: clamp(2em, calc(20px + 1vw), 3.25em);
+$body-bg-color: #EFF6FF;
+$section-bg-color: #FFFFFF;
+$box-shadow: #96A5B1;
+$h1-font-color: #2A4A5C;
+$font-color: #7B8A92;
+$button-font-color: #FFFFFF;
+$facebook-color: #255A9B;
+$linkedin-color: #0076B6;
+
+* {
+  font-family: 'Barlow', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $body-bg-color;
+  box-sizing: border-box;
+  color: $font-color;
+  font-size: $main-font-size;
+}
+
+h1 {
+  color: $h1-font-color;
+  font-size: $h1-font-size;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  -webkit-box-shadow: 20px 20px 40px -12px $box-shadow;
+  -moz-box-shadow: 20px 20px 40px -12px $box-shadow;
+  box-shadow: 20px 20px 40px -12px $box-shadow;
+  background-color: $section-bg-color;
+  width: 90vw;
+  height: 80vh;
+
+  .bg-section {
+    width: 25%;
+  }
+
+  .background {
+    height: 80vh;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    width: clamp(4em, 6em, 8em);
+    z-index: 1;
+    padding: 2em 0 0 2em;
+  }
+
+  .login {
+    width: 75%;
+
+    button {
+      padding: 0.7em 2.5em 0.7em 0.7em;
+      border: 0;
+      color: #FFFFFF;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      border: none;
+
+      .icon {
+        margin-right: 8px;
+        vertical-align: middle;
+        width: 2em;
+        height: 2em;
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+
+    button:hover {
+      box-shadow: 0 0 20px #6fc5ff50;
+    }
+
+    .facebook-button {
+      background-color: $facebook-color;
+    }
+
+    .facebook-button:hover {
+      background-color: darken($facebook-color, 10%);
+    }
+
+
+    .linkedin-button {
+      background-color: $linkedin-color;
+    }
+
+    .linkedin-button:hover {
+      background-color: darken($linkedin-color, 10%);
+    }
+
+  }
+
+}
+

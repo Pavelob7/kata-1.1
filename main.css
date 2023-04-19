@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url("Barlow.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  font-family: 'Barlow', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #EFF6FF;
+  box-sizing: border-box;
+  color: #7B8A92;
+  font-size: clamp(1em, calc(12px + 1vw), 20px); }
+
+h1 {
+  color: #2A4A5C;
+  font-size: clamp(2em, calc(20px + 1vw), 3.25em); }
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+section {
+  display: flex;
+  -webkit-box-shadow: 20px 20px 40px -12px #96A5B1;
+  -moz-box-shadow: 20px 20px 40px -12px #96A5B1;
+  box-shadow: 20px 20px 40px -12px #96A5B1;
+  background-color: #FFFFFF;
+  width: 90vw;
+  height: 80vh; }
+  section .bg-section {
+    width: 25%; }
+  section .background {
+    height: 80vh;
+    position: relative; }
+  section .logo {
+    position: absolute;
+    width: clamp(4em, 6em, 8em);
+    z-index: 1;
+    padding: 2em 0 0 2em; }
+  section .login {
+    width: 75%; }
+    section .login button {
+      padding: 0.7em 2.5em 0.7em 0.7em;
+      border: 0;
+      color: #FFFFFF;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      border: none; }
+      section .login button .icon {
+        margin-right: 8px;
+        vertical-align: middle;
+        width: 2em;
+        height: 2em; }
+      section .login button span {
+        margin-left: 8px; }
+    section .login button:hover {
+      box-shadow: 0 0 20px #6fc5ff50; }
+    section .login .facebook-button {
+      background-color: #255A9B; }
+    section .login .facebook-button:hover {
+      background-color: #1b4272; }
+    section .login .linkedin-button {
+      background-color: #0076B6; }
+    section .login .linkedin-button:hover {
+      background-color: #005583; }
+
+/*# sourceMappingURL=main.css.map */
