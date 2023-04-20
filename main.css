@@ -12,39 +12,60 @@ body {
   background-color: #EFF6FF;
   box-sizing: border-box;
   color: #7B8A92;
-  font-size: clamp(1em, calc(12px + 1vw), 20px); }
-
-h1 {
-  color: #2A4A5C;
-  font-size: clamp(2em, calc(20px + 1vw), 3.25em); }
-
-main {
+  font-size: clamp(0.8em, calc(10px + 1vw), 18px);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center; }
 
-section {
+main {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   -webkit-box-shadow: 20px 20px 40px -12px #96A5B1;
   -moz-box-shadow: 20px 20px 40px -12px #96A5B1;
   box-shadow: 20px 20px 40px -12px #96A5B1;
   background-color: #FFFFFF;
   width: 90vw;
-  height: 80vh; }
-  section .bg-section {
-    width: 25%; }
-  section .background {
-    height: 80vh;
-    position: relative; }
-  section .logo {
-    position: absolute;
-    width: clamp(4em, 6em, 8em);
-    z-index: 1;
-    padding: 2em 0 0 2em; }
-  section .login {
-    width: 75%; }
-    section .login button {
+  height: 80vh;
+  box-sizing: border-box; }
+
+/* background + logo section */
+.bg-section {
+  width: 50%;
+  height: 100%; }
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.logo {
+  position: absolute;
+  width: clamp(4em, 6em, 8em);
+  z-index: 1;
+  padding: 2em 0 0 2em; }
+
+/* login section */
+.login {
+  width: 49%;
+  padding: 5em;
+  /* buttons */
+  /* OR */
+  /* inputs */
+  /* radio */ }
+  .login h1 {
+    color: #2A4A5C;
+    font-size: clamp(1.5em, calc(15px + 1vw), 2.5em);
+    margin-bottom: 0.5em; }
+  .login p {
+    margin-bottom: 3em; }
+  .login .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .login .buttons button {
+      font-size: clamp(0.75em, calc(10px + 1vw), 12px);
       padding: 0.7em 2.5em 0.7em 0.7em;
       border: 0;
       color: #FFFFFF;
@@ -54,23 +75,198 @@ section {
       display: inline-flex;
       align-items: center;
       justify-content: flex-start;
-      border: none; }
-      section .login button .icon {
-        margin-right: 8px;
+      border: none;
+      width: 47%; }
+      .login .buttons button .icon {
+        margin-right: 1em;
         vertical-align: middle;
         width: 2em;
         height: 2em; }
-      section .login button span {
-        margin-left: 8px; }
-    section .login button:hover {
+    .login .buttons button:hover {
       box-shadow: 0 0 20px #6fc5ff50; }
-    section .login .facebook-button {
+    .login .buttons .facebook-button {
       background-color: #255A9B; }
-    section .login .facebook-button:hover {
+    .login .buttons .facebook-button:hover {
       background-color: #1b4272; }
-    section .login .linkedin-button {
+    .login .buttons .linkedin-button {
       background-color: #0076B6; }
-    section .login .linkedin-button:hover {
+    .login .buttons .linkedin-button:hover {
       background-color: #005583; }
+  .login .or-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em; }
+    .login .or-container .line {
+      height: 1px;
+      background-color: #96A5B1;
+      width: 7em; }
+    .login .or-container .or-text {
+      margin: 0 1em;
+      text-transform: uppercase;
+      color: #131313;
+      font-size: 0.8em; }
+  .login .login-input {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5em; }
+    .login .login-input .input {
+      position: relative;
+      width: 47%; }
+      .login .login-input .input input {
+        color: #131313;
+        width: calc(100% - 0.5em);
+        height: 40px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border: #AFAFAF 1px solid;
+        position: relative;
+        top: 0;
+        padding-top: 1em;
+        padding-left: 0.5em; }
+      .login .login-input .input input:focus {
+        border-left: 1.5px solid #3698FB;
+        outline: none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 3px; }
+      .login .login-input .input input, .login .login-input .input span {
+        position: absolute;
+        top: 0;
+        background-color: transparent; }
+      .login .login-input .input span {
+        top: 20px;
+        color: #AFAFAF;
+        padding-left: 4px;
+        transform: translate(4px, -90%);
+        font-size: 0.7em; }
+  .login .container {
+    display: block;
+    position: relative;
+    margin: 40px auto;
+    height: auto;
+    width: 500px;
+    padding: 20px; }
+  .login h2 {
+    color: #AAAAAA; }
+  .login .container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto; }
+  .login ul li {
+    color: #AAAAAA;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #333; }
+  .login ul li input[type=radio] {
+    position: absolute;
+    visibility: hidden; }
+  .login ul li label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 25px 25px 25px 80px;
+    margin: 10px auto;
+    height: 30px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear; }
+  .login ul li:hover label {
+    color: #FFFFFF; }
+  .login ul li .check {
+    display: block;
+    position: absolute;
+    border: 5px solid #AAAAAA;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    top: 30px;
+    left: 20px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear; }
+  .login ul li:hover .check {
+    border: 5px solid #FFFFFF; }
+  .login ul li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear; }
+  .login input[type=radio]:checked ~ .check {
+    border: 5px solid #0DFF92; }
+  .login input[type=radio]:checked ~ .check::before {
+    background: #0DFF92; }
+  .login input[type=radio]:checked ~ label {
+    color: #0DFF92; }
+  .login .signature {
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 100%; }
+  .login .signature p {
+    text-align: center;
+    font-size: 0.85em;
+    color: #AAAAAA; }
+  .login .signature .much-heart {
+    display: inline-block;
+    position: relative;
+    margin: 0 4px;
+    height: 10px;
+    width: 10px;
+    background: #AC1D3F;
+    border-radius: 4px;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .login .signature .much-heart::before,
+  .login .signature .much-heart::after {
+    display: block;
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background: #AC1D3F;
+    top: -4px; }
+  .login .signature .much-heart::after {
+    bottom: 0;
+    top: auto;
+    left: -4px; }
+  .login .signature a {
+    color: #AAAAAA;
+    text-decoration: none;
+    font-weight: bold; }
+  .login .alert {
+    box-sizing: border-box;
+    background-color: #BDFFE1;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    padding: 20px 40px;
+    color: #333; }
+  .login .alert h2 {
+    font-size: 22px;
+    color: #232323;
+    margin-top: 0; }
+  .login .alert p {
+    line-height: 1.6em;
+    font-size: 18px; }
+  .login .alert a {
+    color: #232323;
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

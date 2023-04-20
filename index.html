@@ -8,29 +8,82 @@
 </head>
 <body>
 <main>
+    <!-- Блок с картинкой -->
+    <section class="bg-section">
+        <img src="logo.svg" class="logo" alt="logo">
+        <img src="bg.jpg" class="background" alt="background">
+    </section>
 
-    <section>
-        <div class="bg-section">
-            <img src="logo.svg" class="logo" alt="logo">
-            <img src="bg.jpg" class="background" alt="background">
+    <!-- Блок с логином -->
 
-        </div>
-
-        <div class="login">
-
-            <h1>Get iintoo it today</h1>
-            <p>There is no charge or obligation upon registration.</p>
-
+    <section class="login">
+        <!-- Блок с кнопками -->
+        <h1>Get iintoo it today</h1>
+        <p>There is no charge or obligation upon registration.</p>
+        <form class="buttons">
             <button type="button" class="facebook-button">
-                <img class="icon" src="facebook.svg">
+                <img class="icon" src="facebook.svg" alt="facebook logo">
                 <span>Register with Facebook</span>
             </button>
-
             <button type="button" class="linkedin-button">
-                <img class="icon" src="linkedin.svg">
+                <img class="icon" src="linkedin.svg" alt="linkedin logo">
                 <span>Register with LinkedIn</span>
             </button>
+        </form>
+
+        <!-- Линия OR -->
+        <div class="or-container">
+            <div class="line"></div>
+            <span class="or-text">OR</span>
+            <div class="line"></div>
         </div>
+
+        <!-- 2 инпута -->
+        <form class="login-input">
+            <div class="input">
+                <input name="email" placeholder="" type="email">
+                <span>Email</span>
+            </div>
+            <div class="input">
+                <input class="input" name="phone" placeholder="" type="tel">
+                <span>Phone</span>
+            </div>
+        </form>
+
+        <!-- Радио -->
+
+        <div class="container">
+
+            <h2>Your favorite thing in the world:</h2>
+
+            <ul>
+                <li>
+                    <input type="radio" id="f-option" name="selector">
+                    <label for="f-option">Pizza</label>
+
+                    <div class="check"></div>
+                </li>
+
+                <li>
+                    <input type="radio" id="s-option" name="selector">
+                    <label for="s-option">Bacon</label>
+
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" id="t-option" name="selector">
+                    <label for="t-option">Cats</label>
+
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
     </section>
 
 </main>
