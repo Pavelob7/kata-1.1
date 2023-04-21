@@ -8,16 +8,16 @@
 </head>
 <body>
 <main>
-    <!-- Блок с картинкой -->
+    <!-- Section background + logo -->
     <section class="bg-section">
         <img src="logo.svg" class="logo" alt="logo">
         <img src="bg.jpg" class="background" alt="background">
     </section>
 
-    <!-- Блок с логином -->
+    <!-- Section login -->
 
     <section class="login">
-        <!-- Блок с кнопками -->
+        <!-- Buttons -->
         <h1>Get iintoo it today</h1>
         <p>There is no charge or obligation upon registration.</p>
         <form class="buttons">
@@ -31,14 +31,14 @@
             </button>
         </form>
 
-        <!-- Линия OR -->
+        <!-- OR line -->
         <div class="or-container">
             <div class="line"></div>
             <span class="or-text">OR</span>
             <div class="line"></div>
         </div>
 
-        <!-- 2 инпута -->
+        <!-- inputs -->
         <form class="login-input">
             <div class="input">
                 <input name="email" placeholder="" type="email">
@@ -50,39 +50,59 @@
             </div>
         </form>
 
-        <!-- Радио -->
+        <!-- h2 chose -->
 
-        <div class="container">
+        <h2>What type of investor are you?</h2>
+        <p>Select the type of investor you are below</p>
 
-            <h2>Your favorite thing in the world:</h2>
 
-            <ul>
-                <li>
-                    <input type="radio" id="f-option" name="selector">
-                    <label for="f-option">Pizza</label>
+        <!-- radio -->
 
-                    <div class="check"></div>
-                </li>
+        <ul>
+            <li>
+                <input type="radio" id="individual" name="selector">
+                <label for="individual">Individual <span id="individual-span" class="info"
+                                                         data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+                </label>
 
-                <li>
-                    <input type="radio" id="s-option" name="selector">
-                    <label for="s-option">Bacon</label>
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
 
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
+            <li>
+                <input type="radio" id="business" name="selector">
+                <label for="business">Business <span class="info"
+                                                     data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+                </label>
 
-                <li>
-                    <input type="radio" id="t-option" name="selector">
-                    <label for="t-option">Cats</label>
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
 
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+            <li>
+                <input type="radio" id="ira" name="selector">
+                <label for="ira">IRA <span class="info"
+                                           data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+
+                </label>
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" id="trust" name="selector">
+                <label for="trust">Trust <span id="trust-span" class="info"
+                                               data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+                </label>
+
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
+        </ul>
 
     </section>
 
