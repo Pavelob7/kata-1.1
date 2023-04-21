@@ -13,7 +13,7 @@ $box-shadow: #96A5B1;
 $h1-font-color: #2A4A5C;
 $font-color: #7B8A92;
 $button-font-size: clamp(0.75em, calc(10px + 1vw), 12px);
-$button-font-color: #FFFFFF;
+$button-font-color: #c51d1d;
 $facebook-color: #255A9B;
 $linkedin-color: #0076B6;
 $input-font-color: #131313;
@@ -47,8 +47,8 @@ main {
   justify-content: space-between;
   box-shadow: 20px 20px 40px -12px $box-shadow;
   background-color: $section-bg-color;
-  width: 90vw;
-  height: 80vh;
+  width: 80vw;
+  height: 90vh;
   box-sizing: border-box;
 }
 
@@ -75,8 +75,8 @@ main {
 /* login section */
 
 .login {
-  width: 49%;
-  padding: 5em;
+  width: calc(49% - 10em);
+  padding: 5em 5em 0;
 
   h1 {
     color: $h1-font-color;
@@ -227,18 +227,17 @@ main {
     overflow: auto;
     color: $input-font-color;
 
-
     li {
       display: inline-block;
       position: relative;
     }
 
-    li input[type=radio] {
+    input[type=radio] {
       position: absolute;
       visibility: hidden;
     }
 
-    li label {
+    label {
       display: block;
       position: relative;
       padding: 0 0 0 1.5em;
@@ -250,7 +249,7 @@ main {
     li .check {
       display: block;
       position: absolute;
-      background-color: $input-border-color;
+      border: 2px solid $input-color;
       border-radius: 100%;
       height: 20px;
       width: 20px;
@@ -268,15 +267,16 @@ main {
       top: 5px;
       left: 5px;
       margin: auto;
+      background-color: transparent;
     }
-
 
     input[type=radio]:checked ~ .check::before {
-      background: $button-font-color;
+      background-color: blue;
     }
 
 
-    /* span info */
+
+    /* info in radio */
 
     span {
       display: inline-block;
@@ -289,60 +289,59 @@ main {
       text-align: center;
       margin-left: 0.2em;
     }
-  }
 
-  .info {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-    transition: all .09s ease-out;
 
-    &:before {
-      content: attr(data-info);
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      color: $input-color;
-      padding: 10px 14px;
-      background-color: $section-bg-color;
-      box-shadow: 0px 14px 10px -4px $box-shadow;
-      width: 210px;
-      border-radius: 3px;
-      font-size: 16px;
-      visibility: hidden;
-      z-index: -1;
-      opacity: 0;
-      transition: inherit;
+    .info {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      transition: all .09s ease-out;
+
+      &:before {
+        content: attr(data-info);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $input-color;
+        padding: 10px 14px;
+        background-color: $section-bg-color;
+        box-shadow: 0px 14px 10px -4px $box-shadow;
+        width: 210px;
+        border-radius: 3px;
+        font-size: 16px;
+        visibility: hidden;
+        z-index: -1;
+        opacity: 0;
+        transition: inherit;
+      }
+
+
+      &:hover {
+        &:before {
+          opacity: 1;
+          visibility: visible;
+          z-index: 10;
+          top: calc(100% + 10px);
+        }
+      }
+    }
+
+    #individual-span {
+      &:before {
+        transform: translateX(-40%);
+      }
     }
 
 
-
-    &:hover {
+    #trust-span {
       &:before {
-        opacity: 1;
-        visibility: visible;
-        z-index: 10;
-        top: calc( 100% + 10px );
+        transform: translateX(-100%);
       }
     }
   }
-
-  #individual-span {
-    &:before {
-      transform: translateX(-40%);
-    }
-  }
-
-
-  #trust-span {
-    &:before {
-      transform: translateX(-100%);
-    }
-  }
 }
-
 
 
 
