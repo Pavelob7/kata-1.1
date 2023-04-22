@@ -9,6 +9,7 @@
 
 $main-font-size: clamp(1vw, calc(10px + 1vw), 18px);
 $h1-font-size: clamp(1.5vw, calc(15px + 1vw), 2.5em);
+$h2-font-size: clamp(1.2vw, calc(12px + 1vw), 2.2em);
 $body-bg-color: #EFF6FF;
 $section-bg-color: #FFFFFF;
 $box-shadow: #96A5B1;
@@ -56,8 +57,9 @@ main {
   justify-content: space-between;
   box-shadow: 20px 20px 40px -12px $box-shadow;
   background-color: $section-bg-color;
-  width: 80vw;
-  height: calc(90vh + 4em);
+  width: 100%;
+  max-width: 1300px;
+  height: calc(80vh + 4em);
   box-sizing: border-box;
 }
 
@@ -87,25 +89,28 @@ main {
 .login {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   width: calc(50% - 8em);
-  height: calc(100% - 8em);
-  padding: 2vw 4em;
+  height: calc(100% - 4vw);
+  padding: 3vw 4em 2vw 4em;
 
   h1 {
     color: $h1-font-color;
     font-size: $h1-font-size;
     margin-bottom: 0.5em;
-    width: 51%;
+    width: 100%;
   }
 
   h2 {
     color: $h1-font-color;
-    width: 51%;
+    width: 100%;
     margin-bottom: 0.5em;
+    font-size: $h2-font-size;
   }
 
   p {
-    margin-bottom: 3vw;
+    margin-bottom: 1vw;
+    width: 100%;
   }
 
   /* buttons */
@@ -186,10 +191,20 @@ main {
   .login-input {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     height: 4em;
 
-    .input {
+    .inputs-box {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: calc(3vw + 1em);
+      margin-bottom: 2vw;
+    }
+
+    .one-input {
       position: relative;
       width: 47%;
 
@@ -234,6 +249,10 @@ main {
 
   form {
     width: 100%;
+
+    .radio-box {
+      width: 100%;
+    }
 
     ul {
 
@@ -490,9 +509,35 @@ main {
 
   .login {
     width: 100%;
-    height: 100%;
-    padding: 2vw 4em;
+    padding: 10vw 4em 2vw 4em;
+
+    p {
+      margin-bottom: 3vw;
+    }
+
+    h1 {
+      font-size: clamp(3vw, calc(20px + 1vw), 2.8em);
+    }
+
+    h2 {
+      font-size: clamp(2.8vw, calc(16px + 1vw), 2.5em);
+    }
+
+    .login-input {
+      flex-direction: row;
+
+      .inputs-box {
+        margin-bottom: 4vw;
+      }
+
+      .one-input input {
+        height: 5vw;
+        margin-bottom: 3vw;
+      }
+    }
+
   }
+
 
 }
 
@@ -505,17 +550,37 @@ main {
   }
 
   .login {
+    height: 80%;
     display: flex;
-    align-content: stretch;
     justify-content: center;
-    height: 100%;
-    padding: 0 4vw;
+    padding: 10vw 4em 10vw 4em;
+
+    p {
+      height: 1.5em;
+    }
+
+    h1 {
+      font-size: clamp(4vw, calc(25px + 1vw), 3.2em);
+      height: 1.5em;
+    }
+
+    h2 {
+      font-size: clamp(3.5vw, calc(20px + 1vw), 2.8em);
+    }
+
+    button {
+      margin-bottom: 2vw;
+    }
 
     .login-input {
       flex-direction: row;
 
-      .input input {
-        height: 10vw;
+      .inputs-box {
+        margin-bottom: 10vw;
+      }
+
+      .one-input input {
+        height: 7vw;
         margin-bottom: 3vw;
       }
     }

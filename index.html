@@ -40,96 +40,98 @@
 
         <!-- inputs -->
         <form class="login-input">
-            <div class="input">
-                <input name="email" placeholder="" type="email" required>
-                <span>Email</span>
+            <div class="inputs-box">
+                <div class="one-input">
+                    <input name="email" placeholder="" type="email" required>
+                    <span>Email</span>
+                </div>
+                <div class="one-input">
+                    <input class="input" name="phone" placeholder="" type="tel" required>
+                    <span>Phone</span>
+                </div>
             </div>
-            <div class="input">
-                <input class="input" name="phone" placeholder="" type="tel" required>
-                <span>Phone</span>
+
+
+            <!-- h2 chose -->
+
+            <h2>What type of investor are you?</h2>
+            <p>Select the type of investor you are below</p>
+
+
+            <!-- radio -->
+            <div class="radio-box">
+                <ul>
+                    <li>
+                        <label for="individual" class="radio-button">
+                            <input type="radio" id="individual" name="selector">
+                            <span class="radio"></span>
+                            Individual
+                            <span id="individual-span" class="info"
+                                  data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+                        </label>
+
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="business" class="radio-button">
+                            <input type="radio" id="business" name="selector">
+                            <span class="radio"></span>
+                            Business
+                            <span class="info"
+                                  data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+                        </label>
+
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="ira" class="radio-button">
+                            <input type="radio" id="ira" name="selector">
+                            <span class="radio"></span>
+                            IRA
+                            <span class="info"
+                                  data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+
+                        </label>
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label for="trust" class="radio-button">
+                            <input type="radio" id="trust" name="selector">
+                            <span class="radio"></span>
+                            Trust
+                            <span id="trust-span" class="info"
+                                  data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
+                        </label>
+
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </form>
 
-        <!-- h2 chose -->
-
-        <h2>What type of investor are you?</h2>
-        <p>Select the type of investor you are below</p>
-
-
-        <!-- radio -->
-        <form>
-            <ul>
-                <li>
-                    <label for="individual" class="radio-button">
-                        <input type="radio" id="individual" name="selector">
-                        <span class="radio"></span>
-                        Individual
-                        <span id="individual-span" class="info"
-                              data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
-                    </label>
-
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-
-                <li>
-                    <label for="business" class="radio-button">
-                        <input type="radio" id="business" name="selector">
-                        <span class="radio"></span>
-                        Business
-                        <span class="info"
-                              data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
-                    </label>
-
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-
-                <li>
-                    <label for="ira" class="radio-button">
-                        <input type="radio" id="ira" name="selector">
-                        <span class="radio"></span>
-                        IRA
-                        <span class="info"
-                              data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
-
-                    </label>
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-
-                <li>
-                    <label for="trust" class="radio-button">
-                        <input type="radio" id="trust" name="selector">
-                        <span class="radio"></span>
-                        Trust
-                        <span id="trust-span" class="info"
-                              data-info="I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common">i</span>
-                    </label>
-
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-            </ul>
-        </form>
-
-        <!-- terms + create account -->
-
-        <form>
-            <p class="terms">
-                <label class="terms-checkbox">
-                    <input checked="" type="checkbox">
-                    <span>I agree to the terms and receiving notification from iintoo
+            <!-- terms + create account -->
+            <div>
+                <p class="terms">
+                    <label class="terms-checkbox">
+                        <input checked="" type="checkbox">
+                        <span>I agree to the terms and receiving notification from iintoo
                         <a href="#">View full terms</a>
                     </span>
-                </label>
-            </p>
+                    </label>
+                </p>
 
-            <button class="create">Create Account</button>
+                <button class="create">Create Account</button>
+            </div>
         </form>
     </section>
 
