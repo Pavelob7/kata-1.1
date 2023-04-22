@@ -365,6 +365,7 @@ main {
     box-sizing: border-box; }
 
   .login {
+    background-color: #FFFFFF;
     height: 80%;
     display: flex;
     justify-content: center;
@@ -401,15 +402,14 @@ main {
       overflow-x: hidden; }
       .login .radio-box ul .info:before {
         content: attr(data-info);
-        padding: 5px 7px;
+        padding: 5px 10px;
         box-shadow: 1px 6px 50px -35px #AFAFAF;
         font-size: 1.8em;
-        width: 180px; }
-        .login .radio-box ul .info:before #ira-span:before {
-          transform: translateX(-300%); }
-        .login .radio-box ul .info:before #trust-span:before {
-          transform: translateX(50%);
-          transform: translateY(-70%); }
+        width: 190px; }
+      .login .radio-box ul #ira-span:before {
+        transform: translateX(-80%); }
+      .login .radio-box ul #trust-span:before {
+        transform: translateX(-100%); }
     .login h1 {
       padding-top: 2vw; }
     .login form {
