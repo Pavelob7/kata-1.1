@@ -359,6 +359,12 @@ main {
         height: 5vw;
         margin-bottom: 3vw; } }
 @media screen and (max-width: 736px) {
+  body {
+    background-color: #FFFFFF; }
+
+  main {
+    box-shadow: none; }
+
   main {
     width: 100%;
     height: 100%;
