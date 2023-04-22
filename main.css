@@ -375,7 +375,7 @@ main {
     height: 80%;
     display: flex;
     justify-content: center;
-    padding: 10vw 4vw 10vw 4vw; }
+    padding: 5vw 4vw 10vw 4vw; }
     .login p {
       margin-bottom: 5vw; }
     .login h1 {
@@ -426,6 +426,7 @@ main {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center; } }
+      justify-content: center;
+      margin-bottom: 5vw; } }
 
 /*# sourceMappingURL=main.css.map */
