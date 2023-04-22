@@ -553,10 +553,10 @@ main {
     height: 80%;
     display: flex;
     justify-content: center;
-    padding: 10vw 4em 10vw 4em;
+    padding: 10vw 4vw 10vw 4vw;
 
     p {
-      height: 1.5em;
+      margin-bottom: 5vw;
     }
 
     h1 {
@@ -568,31 +568,76 @@ main {
       font-size: clamp(3.5vw, calc(20px + 1vw), 2.8em);
     }
 
-    button {
+    .buttons button {
       margin-bottom: 2vw;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
     }
 
     .login-input {
       flex-direction: row;
 
       .inputs-box {
-        margin-bottom: 10vw;
+        height: calc((10vw + 1.5em) * 2);
+        margin-bottom: 3vw;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
 
-      .one-input input {
-        height: 7vw;
-        margin-bottom: 3vw;
+      .one-input {
+        width: 100%;
+        height: calc(10vw + 1.5em);
+
+        input {
+          padding-top: 1.5em;
+          height: 8vw;
+          margin-bottom: 3vw;
+        }
       }
     }
-  }
 
-  h1 {
-    padding-top: 2vw;
-  }
+    .radio-box {
+      ul {
+        overflow: scroll;
+        overflow-y: hidden;
+        overflow-x: hidden;
 
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+        .info {
+          &:before {
+            content: attr(data-info);
+            padding: 5px 7px;
+            box-shadow: 1px 6px 50px -35px $input-color;
+            font-size: 1.8em;
+            width: 180px;
+
+
+            #ira-span {
+              &:before {
+                transform: translateX(-300%);
+              }
+            }
+
+            #trust-span {
+              &:before {
+                transform: translateX(50%);
+                transform: translateY(-70%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    h1 {
+      padding-top: 2vw;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
