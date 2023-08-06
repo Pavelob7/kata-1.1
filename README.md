@@ -1,4 +1,4 @@
-### kata-1.1
+# kata-1.1
  
 <p>Макет и задания: https://github.com/jm-program/css-task</p>
 
